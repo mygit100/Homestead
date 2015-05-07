@@ -1,0 +1,33 @@
+Creating Your Laravel 5 Application
+
+composer create-project laravel/laravel5.1 ~/Code --prefer-dist
+
+In the virtual homestead
+
+cd ~/Code
+
+composer create-project laravel/laravel Laravel dev-develop
+
+
+Creating Your Laravel 5 Application
+---------------------------------------------------------
+With Homestead installed you can next create the Laravel 5 application. Because at the time I wrote this Laravel 5 hasn’t yet been officially released, we’ll need to use Composer (PHP’s de facto package management solution) to create a new project using Laravel’s development branch. In order to ensure the application is properly served by Homestead, enter the Code directory identified by the homestead.yaml folders object’s map attribute, delete the Laravel directory and the test script, and then execute the following command:
+$ composer create-project laravel/laravel Laravel dev-develop
+
+Installing laravel/laravel (dev-develop 083db95...dac46617)
+  - Installing laravel/laravel (dev-develop develop)
+  Cloning develop
+...
+Compiling views
+
+Do you want to remove the existing VCS (.git, .svn..) history? [Y,n]? Y
+
+Application key [9UCBk7IDjvAGrkLOUBXw43yYKlymlqE3Y] set successfully.
+
+Once complete, return to your browser, reload http://homestead.app, and you should see the default Laravel 5 application splash page!
+
+source: http://www.easylaravelbook.com/blog/2015/01/08/installing-and-configuring-homestead-2-dot-0-for-laravel-5/
+
+-----------------------------
+sudo /usr/local/bin/composer self-update
+composer require --dev barryvdh/laravel-debugbar

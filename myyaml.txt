@@ -1,0 +1,20 @@
+- map: site1.localdev
+to: /home/vagrant/Code/site1/public
+- map: site2.localdev
+to: /home/vagrant/Code/site2/public
+- map: site3.localdev
+to: /home/vagrant/Code/site3/public
+- map: site4.localdev
+to: /home/vagrant/Code/site4/public
+- map: site5.localdev
+to: /home/vagrant/Code/site5/public
+- map: site6.localdev
+to: /home/vagrant/Code/site6/public
+- map: site7.localdev
+to: /home/vagrant/Code/site7/public
+
+
+
+
+    - map: homestead.app
+      to: /home/vagrant/Code/Laravel/public

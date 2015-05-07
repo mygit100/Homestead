@@ -5,11 +5,11 @@ class Homestead
     config.vm.hostname = "homestead"
 
     # Configure A Private Network IP
-    config.vm.network :private_network, ip: settings["ip"] ||= "192.168.10.10"
+    config.vm.network :private_network, ip: settings["ip"] ||= "192.168.100.10"
 
     # Configure A Few VirtualBox Settings
     config.vm.provider "virtualbox" do |vb|
-      vb.customize ["modifyvm", :id, "--memory", settings["memory"] ||= "2048"]
+      vb.customize ["modifyvm", :id, "--memory", settings["memory"] ||= "1024"]
       vb.customize ["modifyvm", :id, "--cpus", settings["cpus"] ||= "1"]
       vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
       vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]

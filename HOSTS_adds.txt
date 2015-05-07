@@ -1,0 +1,6 @@
+
+# section for Laravel
+127.0.0.1 laravel5.app
+127.0.0.1 lavavel4.app
+127.0.0.1 mydev.app
+127.0.0.1 mytest.app

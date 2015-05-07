@@ -1,6 +1,7 @@
 ---
-ip: "192.168.10.10"
-memory: 2048
+ip: "192.168.100.10"
+#memory: 512
+memory: 1024
 cpus: 1
 
 authorize: ~/.ssh/id_rsa.pub
@@ -9,12 +10,43 @@ keys:
     - ~/.ssh/id_rsa
 
 folders:
-    - map: ~/Code
-      to: /home/vagrant/Code
+# The command below copies all code folders to the VM.
+#    - map: ~/Dropbox/myCode/Code
+#      to: /home/vagrant/Code
+
+# The command below only copies folder laravel5.app and subfolders to the VM.
+     - map: ~/Dropbox/myCode/Code/laravel5.app
+       to: /home/vagrant/Code/laravel5.app
+
+     - map: ~/Dropbox/myCode/Homestead
+       to: /home/vagrant/Homestead
+
+     - map: ~/Dropbox/myCode/Code/sample
+       to: /home/vagrant/Code/mytest.app
+
 
 sites:
-    - map: homestead.app
-      to: /home/vagrant/Code/Laravel/public
+    - map: laravel5.app
+      to: /home/vagrant/Code/laravel5.app/public
+
+#    - map: mytest.app
+#      to: /home/vagrant/Code/mytest.app/public
+
+    - map: mytest.app
+      to: /home/vagrant/Code/mytest.app/src
+
+    - map: mydev.app
+      to: /home/vagrant/Code/mydev.app/public
+
+    - map: laravel4.app
+      to: /home/vagrant/Code/Laravel4/public
+
+databases: homestead
+# port: 3360
+# host: 127.0.0.1
+# username: homestead
+# password: secret
+
 
 variables:
     - key: APP_ENV
