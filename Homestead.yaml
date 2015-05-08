@@ -21,8 +21,8 @@ folders:
      - map: ~/Dropbox/myCode/Homestead
        to: /home/vagrant/Homestead
 
-     - map: ~/Dropbox/myCode/Code/sample
-       to: /home/vagrant/Code/mytest.app
+     - map: ~/Dropbox/myCode/Code/mycode
+       to: /home/vagrant/Code/mycode.app
 
 
 sites:
@@ -32,8 +32,8 @@ sites:
 #    - map: mytest.app
 #      to: /home/vagrant/Code/mytest.app/public
 
-    - map: mytest.app
-      to: /home/vagrant/Code/mytest.app/src
+    - map: mycode.app
+      to: /home/vagrant/Code/mycode.app/public
 
     - map: mydev.app
       to: /home/vagrant/Code/mydev.app/public
